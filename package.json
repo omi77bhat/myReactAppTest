@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/nightwatch ./tests/demo.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,12 @@
     "chromedriver": "^90.0.0",
     "nightwatch": "^1.6.3",
     "selenium-server": "^3.141.59"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2",
+    "start-server-and-test": "^1.12.1"
   }
 }

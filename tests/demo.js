@@ -1,12 +1,12 @@
 module.exports = {
-    'Test to launch website and verify Home Page of React App' : function (browser) {
-      browser
+
+    'Test to launch website and verify Home Page of React App' : function (browser) { 
+        browser
         .url('http://localhost:8080/') 
         .pause(5000)
         .getTitle((title) => console.log(title))
         .assert.title('React App')
       
-
     },
 
     'To Test the ADD button functionality' : function (browser){
@@ -93,10 +93,15 @@ module.exports = {
         browser
         //To verify Description is updated
         .assert.containsText('//*[@id="root"]/div/div/div/div[3]/div/div[2]','Automation Tester')
-        //To verify Status is updated 
-  //      .assert.containsText('//*[@id="root"]/div/div/div/div[3]/div/div[3]','Status: Published')
-
-
+         //To verify tutorial Status is updated or not
+        .getText('//*[@id="root"]/div/div/div/div[3]/div/div[3]', function(result){
+            if (result.value = 'Status: Published') {
+                console.log('->The tutorial Status is updated.')
+            } else {
+                console.log('->The tutorial Status has not changed. Still Pending.')
+            }
+        })
+       
     },
 
     'To validate the Search funconality' : function(browser){
