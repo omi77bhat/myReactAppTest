@@ -118,5 +118,7 @@ module.exports = {
           //Click on Remove All button
         .useXpath().click('//*[@id="root"]/div/div/div/div[2]/button')
         .end()
+        //CI TEst
     }
 };
+
