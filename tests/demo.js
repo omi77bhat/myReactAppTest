@@ -5,6 +5,7 @@ module.exports = {
         .url('http://localhost:8080/') 
         .pause(5000)
         .getTitle((title) => console.log(title))
+        //Verify the title of the Page
         .assert.title('React App')
       
     },

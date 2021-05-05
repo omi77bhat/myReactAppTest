@@ -1,3 +1,4 @@
+//This file will help usto make sure we can dynamically pass the element selectors.
 module.exports = {
     url: 'http://localhost:8080/',
     elements: {
