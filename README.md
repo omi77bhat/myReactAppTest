@@ -4,7 +4,7 @@
 #Before running the test:
 
 #Make sure node server is up and running.
-#To start the server type command:
+#To start the server, type command:
 
 node server.js
 
